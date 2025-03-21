@@ -16,21 +16,15 @@ logger = logging.getLogger(__name__)
 
 DB_FAISS_PATH = 'vectorstore3/db_faiss'
 
-custom_prompt_template = """
-Using the Ayurvedic information provided below, answer the user's question in a detailed and well-structured manner. Ensure that the response is clear and informative, and include any relevant recommendations for health issues.
+custom_prompt_template = """Use the following pieces of information to answer the user's question.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
 Context: {context}
 Question: {question}
 
-Response:
-1. **Introduction**: Provide a brief introduction related to the context.
-2. **Detailed Answer**: Elaborate on the question, offering in-depth information and explanations.
-3. **Recommendations**: If applicable, suggest Ayurvedic practices, remedies, or lifestyle changes for the health issue mentioned.
-4. **Conclusion**: Summarize the response and offer any additional advice or tips.
-
-Remember to keep the language user-friendly and professional.
+Only return the helpful answer below and nothing else.
+Helpful answer:
 """
-
 
 tokenizer = AutoTokenizer.from_pretrained(
     "sentence-transformers/all-MiniLM-L6-v2")
