@@ -97,17 +97,15 @@ def final_result(query):
     logger.info(f"Response time: {elapsed_time} seconds")
     return response
 
-
 @cl.on_chat_start
 async def start():
     chain = qa_bot()
-    msg = cl.Message(content="Starting the bot...")
+    msg = cl.Message(content="Initializing Legal AI System...")
     await msg.send()
-    msg.content = "Hi, Welcome to Sanjeevini chatBot."
+    msg.content = "Welcome to the Legal AI Assistant. How can I assist you today?"
     await msg.update()
 
     cl.user_session.set("chain", chain)
-
 
 @cl.on_message
 async def main(message: cl.Message):
