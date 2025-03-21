@@ -89,33 +89,35 @@ custom_meta_image_url = "https://chainlit-cloud.s3.eu-west-3.amazonaws.com/logo/
 
 [UI.theme]
     default = "dark"
-    #layout = "wide"
-    #font_family = "Inter, sans-serif"
+
 # Override default MUI light theme. (Check theme.ts)
 [UI.theme.light]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
+    background = "#F4F6F9"  # Light grayish-blue background
+    paper = "#FFFFFF"  # White cards for contrast
 
     [UI.theme.light.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
+        main = "#1D3557"  # Deep Blue for primary buttons & highlights
+        dark = "#0F1B2D"  # Dark Navy for hover states
+        light = "#A8DADC"  # Light Blue for soft highlights
+
     [UI.theme.light.text]
-        #primary = "#212121"
-        #secondary = "#616161"
+        primary = "#212121"  # Dark gray text for readability
+        secondary = "#616161"  # Lighter gray for secondary text
 
 # Override default MUI dark theme. (Check theme.ts)
 [UI.theme.dark]
-    #background = "#FAFAFA"
-    #paper = "#FFFFFF"
+    background = "#12171F"  # Dark blue-gray for a professional dark theme
+    paper = "#1C2331"  # Slightly lighter shade for cards
 
     [UI.theme.dark.primary]
-        #main = "#F80061"
-        #dark = "#980039"
-        #light = "#FFE7EB"
+        main = "#FFC107"  # Gold for highlights & buttons (symbolizing prestige)
+        dark = "#B8860B"  # Darker Gold for hover states
+        light = "#FFECB3"  # Soft gold highlight
+
     [UI.theme.dark.text]
-        #primary = "#EEEEEE"
-        #secondary = "#BDBDBD"
+        primary = "#EEEEEE"  # White text for readability
+        secondary = "#BDBDBD"  # Lighter gray for subtitles
+
 
 [meta]
 generated_by = "1.1.306"
